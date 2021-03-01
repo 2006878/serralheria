@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$database = "serralheriaamaral";
-$username = "tairone";
-$password = "Amaral247";
+$servername = "******";
+$database = "******";
+$username = "******";
+$password = "******";
 
 // Create connection
 
@@ -15,6 +15,5 @@ if (!$conn) {
     die("Falha na conexão: " . mysqli_connect_error());
 
 }
-echo "Sucesso na conexão";
-mysqli_close($conn);
+
 ?>

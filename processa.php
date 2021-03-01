@@ -7,12 +7,13 @@ $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
 $endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_STRING);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 
-$result = "INSERT INTO orcamento (nome, email, telefone, endereco, descricao, created) VALUES ('$nome', '$email', '$telefone', '$endereco', '$descricao', NOW())";
-$resultado_orcamento = mysqli_query($conn, $result);
+$result = "INSERT INTO orcamento (nome, email, telefone, endereco, descricao, created) 
+VALUES ('$nome', '$email', '$telefone', '$endereco', '$descricao', NOW())";
 
-if (mysqli_insert_id($conn)) {
-    header("Location: index.html");
-}else{
-    header("Location: index.html");
+
+if (mysqli_query($conn, $result)) {
+     header("Location: index.html");
+}else {
+     echo "Error: " . $result . "<br>" . mysqli_error($conn);
 }
-?>
+
