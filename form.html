@@ -88,41 +88,50 @@
     </div>
     </nav>
 
-<!--Conteúdo-->
-<div class="divform"><br>
-    <h3>Preencha os campos abaixo e logo entraremos em contato:</h3><br>
-        <form action="submit">
-            <label>Nome:</label>
-            <input type="text" name="nome" size="80"><br><br>
-            <label>Endereço:</label>
-            <input type="text" name="endereço" size="80"><br><br>
-            <label>Telefone:</label>
-            <input type="tel" name="telefone"><br><br>
-            <label>E-mail:</label>
-            <input type="email" name="email" size="50"><br><br>
-            <label>Descrição:</label>
-            <textarea class="form-control" placeholder="Descreva aqui o produto ou serviço a ser orçado" id="descrição"></textarea><br><br>
-            <button type="submit" class="btn btn-primary">Enviar</button><br><br>
-        </form>
-</div> 
+    <!--Conteúdo-->
+    <br><br>
+    <h1 style="text-align: center;">Preencha os campos e logo entraremos em contato</h1>
+    <form class="row g-3" method="POST" action="processa.php">
+      <div class="col-12"><br><br>
+        <label for="nome" class="form-label"><b>Nome:</b></label>
+        <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome completo">
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label"><b>Email:</b></label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email">
+      </div>
+      <div class="col-md-6">
+        <label for="telefone" class="form-label"><b>Telefone:</b></label>
+        <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="Digite seu telefone para contato">
+        
+      </div>
+      <div class="col-12">
+        <label for="endereco" class="form-label"><b>Endereço:</b></label>
+        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço Completo">
+      </div>
+      <div class="col-md-12">
+        <label for="descricao" class="form-label"><b>Descrição:</b></label>
+        <textarea class="form-control" placeholder="Descreva aqui o produto ou serviço a ser orçado" name="descricao" id="descrição"></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form><br><br>
 
-<!--Mapa-->
-<!--div class="carousel slide d-none d-sm-block">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.008585524337!2d-46.61444268458234!3d-20.70987596838147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b6c3c7534ac9d3%3A0x97a8655323e761fa!2sAv.%20Oto%20Krakauer%2C%201130%20-%20Santa%20Casa%2C%20Passos%20-%20MG%2C%2037904-028!5e0!3m2!1spt-BR!2sbr!4v1613904314916!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div-->
+    <!--Mapa-->
+    <!--div class="carousel slide d-none d-sm-block">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.008585524337!2d-46.61444268458234!3d-20.70987596838147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b6c3c7534ac9d3%3A0x97a8655323e761fa!2sAv.%20Oto%20Krakauer%2C%201130%20-%20Santa%20Casa%2C%20Passos%20-%20MG%2C%2037904-028!5e0!3m2!1spt-BR!2sbr!4v1613904314916!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div-->
 
     <!-- Footer -->
-<footer class="page-footer font-small bg-dark">
-
-    <!-- Footer -->
-  <footer class="page-footer font-small bg-dark">
+    <footer class="page-footer font-small bg-dark">
   
     <!-- Copyright -->
     
-    <div class="footer-copyright text-center py-3">
-      <a href="https://www.google.com/maps/place/Serralheria+Amaral/@-20.7085659,-46.6153987,17z/data=!3m1!4b1!4m5!3m4!1s0x94b6c3c09c233ff9:0xe1346409a3c2c8e8!8m2!3d-20.7085659!4d-46.61321" style="color: blanchedalmond;"><b>Endereço: Avenida Otto Krakauer, 1130A - Passos - MG</b></a><br>
-      <a href="https://github.com/2006878" style="color: grey; font-size: small;">Desenvolvido por Tairone Amaral</a>
-    </div>
+      <div class="footer-copyright text-center py-3">
+        <a href="https://www.google.com/maps/place/Serralheria+Amaral/@-20.7085659,-46.6153987,17z/data=!3m1!4b1!4m5!3m4!1s0x94b6c3c09c233ff9:0xe1346409a3c2c8e8!8m2!3d-20.7085659!4d-46.61321" style="color: blanchedalmond;"><b>Endereço: Avenida Otto Krakauer, 1130A - Passos - MG</b></a><br>
+        <a href="https://github.com/2006878" style="color: grey; font-size: small;">Desenvolvido por Tairone Amaral</a>
+      </div>
     <!-- Copyright -->
   
   </footer>
