@@ -96,7 +96,7 @@ document.getElementById("content").innerHTML = `
         <!-- /END THE FEATURETTES -->
     </div>
 `;
-fetch('components/navbar.html')
+fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
     document.getElementById('navbar').innerHTML = data;
@@ -104,7 +104,7 @@ fetch('components/navbar.html')
     .catch(error => {
     console.error('Erro ao carregar o arquivo:', error);
     });
-fetch('../carousel.html')
+fetch('carousel.html')
     .then(response => response.text())
     .then(data => {
     document.getElementById('carousel').innerHTML = data;
@@ -112,7 +112,7 @@ fetch('../carousel.html')
     .catch(error => {
     console.error('Erro ao carregar o arquivo:', error);
     });
-fetch('components/footer.html')
+fetch('footer.html')
     .then(response => response.text())
     .then(data => {
     document.getElementById('footer').innerHTML = data;
