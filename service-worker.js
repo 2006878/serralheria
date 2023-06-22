@@ -1,22 +1,36 @@
-self.addEventListener('install', function(event) {
+  var CACHE_NAME = 'V0.1';
+
+  self.addEventListener('install', function(event) {
     event.waitUntil(
-      caches.open('v1').then(function(cache) {
+      caches.open(CACHE_NAME).then(function(cache) {
         return cache.addAll([
-          '/',
-          '/index.html',
-          '/home.js',
-          '/portoes.js',
-          '/portoes.html',
-          '/automacao.js',
-          '/automacao.html',
-          '/footer.html',
-          '/carousel.html',
-          '/carousel_automacao.html',
-          '/navbar.html',
-          '/carousel.css',
-          
-          // Adicione aqui todos os arquivos que você deseja que sejam cacheados pelo Service Worker
+            '/',
+            '/index.html',
+            '/home.js',
+            '/portoes.js',
+            '/portoes.html',
+            '/automacao.js',
+            '/automacao.html',
+            '/footer.html',
+            '/carousel.html',
+            '/carousel_automacao.html',
+            '/navbar.html',
+            '/carousel.css',
         ]);
+      })
+    );
+  });
+  
+  self.addEventListener('activate', function(event) {
+    event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.filter(function(cacheName) {
+            return cacheName !== CACHE_NAME;
+          }).map(function(cacheName) {
+            return caches.delete(cacheName);
+          })
+        );
       })
     );
   });
@@ -28,4 +42,3 @@ self.addEventListener('install', function(event) {
       })
     );
   });
-  

@@ -1,67 +1,13 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('Service Worker is registered', registration);
       }, function(err) {
-        console.log('ServiceWorker registration failed: ', err);
+        console.error('Registration failed:', err);
       });
     });
 };
-// Verificar se o navegador suporta a instalação do PWA
-if ('serviceWorker' in navigator && 'PushManager' in window) {
-    window.addEventListener('load', function() {
-      // Registrar o Service Worker e manipular a lógica de instalação do PWA
-      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-  
-        // Verificar se o PWA já está instalado
-        if (registration.installing || registration.waiting || registration.active) {
-          return;
-        }
-  
-        // Prompt para instalação do PWA
-        let installPrompt;
-  
-        window.addEventListener('beforeinstallprompt', function(event) {
-          // Impedir o prompt de instalação automática
-          event.preventDefault();
-          // Armazenar o evento do prompt para uso posterior
-          installPrompt = event;
-          // Exibir o botão ou ação para o usuário instalar o PWA
-          showInstallButton();
-        });
-  
-        // Função para exibir o botão ou ação de instalação do PWA
-        function showInstallButton() {
-          // Exibir o botão ou ação de instalação
-          // Por exemplo, você pode criar um botão "Instalar" e vincular o evento de clique a esta função
-          // O código abaixo é apenas um exemplo de como exibir o prompt de instalação quando o botão é clicado
-          const installButton = document.getElementById('install-button');
-  
-          installButton.addEventListener('click', function() {
-            if (installPrompt) {
-              installPrompt.prompt();
-  
-              installPrompt.userChoice.then(function(choiceResult) {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User accepted the installation');
-                } else {
-                  console.log('User dismissed the installation');
-                }
-  
-                // Limpar a referência do prompt de instalação
-                installPrompt = null;
-              });
-            }
-          });
-  
-          installButton.style.display = 'block';
-        }
-      }).catch(function(error) {
-        console.log('ServiceWorker registration failed: ', error);
-      });
-    });
-  };  
+console.log("Não instalou o PWA");
 document.title = "Serralheria Amaral - Passos e região";        
 document.getElementById("style").innerHTML = `
     bd-placeholder-img {
