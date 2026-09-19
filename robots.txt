@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serralheriaamaral.com.br/sitemap.xml

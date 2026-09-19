@@ -1,18 +1,27 @@
 {
-    "name": "Serralheria Amaral",
-    "short_name": "Amaral",
-    "description": "Serralheria Amaral - Desde 1992",
-    "icons": [
-      {
-        "src": "img/logo.jpg",
-        "sizes": "128x128",
-        "type": "image/jpg",
-      }
-    ],
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "scope": "/",
-    "theme_color": "#000000"
-  }
-  
+  "name": "Serralheria Amaral",
+  "short_name": "Amaral",
+  "description": "Serralheria Amaral - Soluções em metal desde 1992 em Passos-MG",
+  "icons": [
+    {
+      "src": "img/logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f4",
+  "scope": "/",
+  "theme_color": "#15181d"
+}
